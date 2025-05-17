@@ -137,10 +137,6 @@ Dr. Priya at Brain Care (Coimbatore)
 
 ---
 
-Screenshot
-
-(Add a screenshot here of the app running with an example search and booked appointment)
-
 
 ---
 
