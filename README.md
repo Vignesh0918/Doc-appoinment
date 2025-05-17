@@ -1,42 +1,154 @@
-# Doctor Recommender with Appointment Booking
-
-A smart web application that recommends doctor specializations based on user symptoms using OpenAI's GPT model, filters doctors by location, shows doctor details including Google Maps links, and allows users to book appointment slots.
+DOCTOR-APPOINMENT -BOOKING
 
 ---
 
-## Features
+LangGraph-based Doctor Recommender with Appointment Booking
 
-- **Symptom-based Doctor Specialization Prediction:**  
-  Enter symptoms, and the app uses GPT to suggest the right doctor specialization (e.g., General Physician, Neurologist, ENT Specialist).
+This is a Streamlit web app powered by LangGraph, LangChain, and OpenAI that helps users:
 
-- **Location-based Doctor Search:**  
-  After selecting the specialization, the app filters available doctors based on the user's input location.
+Identify the right doctor specialization based on symptoms.
 
-- **Doctor Details & Google Maps:**  
-  View doctors' clinic addresses, fees, available time slots, and clickable links to Google Maps for clinic location.
+View a list of available doctors in their location.
 
-- **Appointment Booking:**  
-  Users can select an available time slot and book appointments directly within the app.
+Book appointments by selecting available time slots.
 
-- **State Management with LangGraph:**  
-  The app uses LangGraph to manage the flow of states — from symptom input to specialization prediction, doctor search, and booking.
+
 
 ---
 
-## Technologies Used
+Demo
 
-- **Python 3.8+**  
-- **Streamlit:** For building the interactive web UI  
-- **LangGraph:** To manage application state and workflow  
-- **LangChain & OpenAI API:** For LLM-driven doctor specialization prediction  
-- **dotenv:** To load OpenAI API keys from `.env` securely  
+Features:
+
+LLM-powered specialization prediction based on symptoms
+
+Location-based doctor filtering
+
+Streamlit sidebar UI to show doctors and appointments
+
+Google Maps integration for clinic addresses
+
+Stateful appointment tracking using st.session_state
+
+
 
 ---
 
-## Setup Instructions
+Tech Stack
 
-1. **Clone the repository:**
+LangChain
 
-   ```bash
-   git clone https://github.com/your-username/doctor-recommender.git
-   cd doctor-recommender
+LangGraph
+
+OpenAI API
+
+Streamlit
+
+Python 3.9+
+
+
+
+---
+
+How It Works
+
+1. User inputs symptoms and their location
+
+
+2. LLM predicts the best doctor specialization
+
+
+3. Doctors are filtered by location and shown
+
+
+4. User can select time slots and book appointments
+
+
+
+
+---
+
+Setup Instructions
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/doctor-recommender-langgraph.git
+cd doctor-recommender-langgraph
+
+2. Install Dependencies
+
+Create a virtual environment and install:
+
+python -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+
+requirements.txt sample:
+
+openai
+langchain
+langgraph
+streamlit
+python-dotenv
+
+3. Set Up OpenAI API Key
+
+Create a .env file in the project root:
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+4. Run the App
+
+streamlit run app.py
+
+
+---
+
+Folder Structure
+
+.
+├── app.py             # Main Streamlit app with LangGraph integration
+├── .env               # Your OpenAI API key
+├── requirements.txt   # Python dependencies
+└── README.md          # Project documentation
+
+
+---
+
+Example Input
+
+> Symptoms: Headache, dizziness, blurry vision
+Location: Salem
+
+
+
+Output:
+
+Recommended Specialist: Neurologist
+
+Available Doctors:
+
+Dr. Kumar at Neuro Center (Salem)
+
+Dr. Priya at Brain Care (Coimbatore)
+
+
+
+
+---
+
+Screenshot
+
+(Add a screenshot here of the app running with an example search and booked appointment)
+
+
+---
+
+License
+
+MIT License
+
+
+---
+
+Let me know if you'd like me to generate a requirements.txt file or add badges, Dockerfile, or GitHub Actions workflow.
