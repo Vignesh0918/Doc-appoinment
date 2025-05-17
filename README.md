@@ -151,4 +151,3 @@ MIT License
 
 ---
 
-Let me know if you'd like me to generate a requirements.txt file or add badges, Dockerfile, or GitHub Actions workflow.
